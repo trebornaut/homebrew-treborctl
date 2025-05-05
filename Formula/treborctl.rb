@@ -9,7 +9,7 @@ class Treborctl < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/trebornaut/treborctl/releases/download/v0.3.7/treborctl_0.3.7_Darwin_x86_64.zip"
+      url "https://github.com/trebornaut/treborctl/releases/download/v0.3.7/treborctl_0.3.7_Darwin_x86_64.zip", using: GitHubPrivateRepositoryReleaseDownloadStrategy
       sha256 "2c05e20e9bc879f01f683a92d13292522f7859600ddcb96736a151dfeb765a7c"
 
       def install
@@ -17,7 +17,7 @@ class Treborctl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/trebornaut/treborctl/releases/download/v0.3.7/treborctl_0.3.7_Darwin_arm64.zip"
+      url "https://github.com/trebornaut/treborctl/releases/download/v0.3.7/treborctl_0.3.7_Darwin_arm64.zip", using: GitHubPrivateRepositoryReleaseDownloadStrategy
       sha256 "d06dce56b61080b2d4adce92c6db682d0fcbb72a9338e57f06ebf6bd6afa206d"
 
       def install
@@ -28,14 +28,14 @@ class Treborctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/trebornaut/treborctl/releases/download/v0.3.7/treborctl_0.3.7_Linux_x86_64.zip"
+      url "https://github.com/trebornaut/treborctl/releases/download/v0.3.7/treborctl_0.3.7_Linux_x86_64.zip", using: GitHubPrivateRepositoryReleaseDownloadStrategy
       sha256 "fc29316837d41be15be1e252348c1433f1c05511fc551061bafc98fbb7d0b5c9"
       def install
         bin.install "treborctl"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/trebornaut/treborctl/releases/download/v0.3.7/treborctl_0.3.7_Linux_arm64.zip"
+      url "https://github.com/trebornaut/treborctl/releases/download/v0.3.7/treborctl_0.3.7_Linux_arm64.zip", using: GitHubPrivateRepositoryReleaseDownloadStrategy
       sha256 "128532e833955e1e89a9de2bc7148924c6598fb122d414109207b496fe20e99e"
       def install
         bin.install "treborctl"
